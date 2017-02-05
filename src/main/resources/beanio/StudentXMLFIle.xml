@@ -1,0 +1,9 @@
+<beanio xmlns="http://www.beanio.org/2012/03">
+    <stream name="students" format="xml">
+        <record name="student" minOccurs="0" maxOccurs="unbounded" class="com.homeserver.entity.StudentDTO">
+            <field name="name" />
+            <field name="email" />
+            <field name="purchasedPackage" />
+        </record>
+    </stream>
+</beanio>

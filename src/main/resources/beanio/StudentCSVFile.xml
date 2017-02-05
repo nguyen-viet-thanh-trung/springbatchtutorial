@@ -1,0 +1,17 @@
+<beanio xmlns="http://www.beanio.org/2012/03">
+    <stream name="students" format="csv">
+        <parser>
+            <property name="delimiter" value=";" />
+        </parser>
+        <record name="header" occurs="1">
+            <field name="name" default="NAME"/>
+            <field name="email" default="EMAIL_ADDRESS"/>
+            <field name="purchasedPackage" default="PACKAGE"/>
+        </record>
+        <record name="student" minOccurs="0" maxOccurs="unbounded" class="com.homeserver.entity.StudentDTO">
+            <field name="name" />
+            <field name="email" />
+            <field name="purchasedPackage" />
+        </record>
+    </stream>
+</beanio>
